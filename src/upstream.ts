@@ -47,8 +47,16 @@ export const upstream = {
   },
 }
 
-const tileToDownstreamTile = (input: Tile) => ({
-  id: input.id,
-  type: input.type,
-  ...input.attributes,
+const tileToDownstreamTile = ({
+  id,
+  type,
+  attributes,
+}: {
+  id: string
+  type: string
+  attributes: TileAttributes
+}) => ({
+  id,
+  type,
+  ...attributes,
 })

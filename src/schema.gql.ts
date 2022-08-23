@@ -1,9 +1,9 @@
 import { gql } from 'apollo-server'
 export const schema = gql`
   type Query {
-    getTiles: [Tile!]!
+    getTiles: [Tile!]! | CompositeError
   }
-
+  
   type Tile {
     id: String!
     type: String!
